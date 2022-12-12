@@ -7,12 +7,12 @@ data = pd.read_csv('matsumoto_temp.csv',encoding = 'ANSI')
 print(data)
 
 # グラフに出力
-df_matsumoto_temp = data.iloc[:, [0,1]]
-df_matsumoto_temp.plot()
-plt.title('2021年1月 松本市の気温')
+data.plot()
+plt.title('松本市の気温')
 plt.xlabel('日付')
 plt.ylabel('気温')
-plt.show()
 
 # グラフをpngに保存
 plt.savefig("matsumoto_temp.png")
+
+plt.show()
